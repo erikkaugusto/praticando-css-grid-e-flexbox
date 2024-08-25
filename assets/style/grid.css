@@ -1,0 +1,28 @@
+.banner {
+    display: grid;
+    gap: 1rem;
+}
+
+.banner img:nth-child(1) {
+    grid-column: 1/3; /* DO TRAÇO 1 ATÉ O 3, TRAÇOS SÃO LINHAS DO GRID, SE EU TENHO 3 LINHAS, SERÃO 4 TRAÇOS */
+}
+
+.banner img:nth-child(4){
+    grid-area: 2 / 2 / 4 / 3;
+    /* Grid Row Start / Grid Column Start / Grid Row End / Grid Column End */
+
+    /* grid-column: 2/3;
+    grid-row: 2/4;  */
+}     
+
+@media (min-width: 720px) {
+    .banner img:nth-child(1) {
+        grid-column: 1/2; 
+        grid-row: 1/3;
+    }
+    
+    .banner img:nth-child(4){
+        grid-column: 3/4;
+        grid-row: 1/3; 
+    }    
+}
